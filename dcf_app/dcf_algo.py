@@ -1,5 +1,5 @@
 # Algorithm for DCF Analysis developed by Rohan Raval and Amar Singh
-import finance_scraper
+import scraper
 import numpy as np
 import pandas as pd
 from scipy import sparse
@@ -13,7 +13,7 @@ def free_cash_flow(revenue, cogs, sga, da, capex, nwc):
 
 
 def revenue_growth_model(ticker):
-	financial_data = finance_scraper.getFinancialData(ticker)
+	financial_data = scraper.getFinancialData(ticker)
 
 	revenue = financial_data["Revenue"]
 	df = pd.DataFrame.from_dict(revenue.items())
