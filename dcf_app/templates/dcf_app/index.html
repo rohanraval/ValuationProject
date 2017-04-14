@@ -1,0 +1,11 @@
+{% extends "dcf_app/base.html" %}
+{% block content %}
+<div class="col-sm-12">
+	<form action="{% url 'results' %}" method="POST" >
+		{% csrf_token %}
+		Enter Ticker:
+		<input type="text" name="ticker"><br>
+		<input type="submit" class="btn btn-success" value="Submit">
+	</form>
+</div>
+{% endblock %}
